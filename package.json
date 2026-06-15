@@ -1,0 +1,26 @@
+{
+  "name": "crypto-indicator",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Bitcoin Bull Market Support Band crossing monitor",
+  "type": "module",
+  "packageManager": "yarn@1.22.22",
+  "scripts": {
+    "build": "tsc",
+    "dev": "node --watch --env-file-if-exists=.env src/index.ts",
+    "start": "yarn build && node --env-file-if-exists=.env dist/src/index.js",
+    "typecheck": "tsc --noEmit",
+    "test": "yarn build && node --test dist/tests/*.test.js"
+  },
+  "engines": {
+    "node": ">=22.6"
+  },
+  "devDependencies": {
+    "@types/node": "25.9.3",
+    "typescript": "6.0.3"
+  },
+  "dependencies": {
+    "node-telegram-bot-api": "1.1.0",
+    "sharp": "0.35.1"
+  }
+}
