@@ -7,19 +7,18 @@
   "packageManager": "yarn@1.22.22",
   "scripts": {
     "build": "tsc",
-    "dev": "node --watch --env-file-if-exists=.env src/index.ts",
+    "dev": "tsx watch src/index.ts",
     "start": "yarn build && node --env-file-if-exists=.env dist/src/index.js",
     "typecheck": "tsc --noEmit",
     "test": "yarn build && node --test dist/tests/*.test.js"
   },
-  "devDependencies": {
-    "@types/node": "25.9.3",
-    "typescript": "6.0.3"
-  },
-  "dependencies": {
+   "dependencies": {
     "node-telegram-bot-api": "1.1.0",
-    "sharp": "0.35.1",
-    "tsx": "4.21.0",
-    "typescript": "6.0.2"
+    "sharp": "0.35.1"
+  },
+   "devDependencies": {
+    "@types/node": "25.9.3",
+    "typescript": "6.0.3",
+    "tsx": "4.21.0"
   }
 }
